@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body style="background-color:lightYellow;">
+
+<form class="" action="Pay.html" method="get">
+
+
+
+<fieldset style="width:40%; background-color:blue;" >
+  <legend  style="width:40%;"> Output</legend>
+
+    <h1 style="color:white;"> lotion Name: <span id="display_name1"> </span></h1>
+
+    <h2 style="color:white;"> price is: <span id="price_id1"></span></h2>
+
+
+  <!--  <h1 style="font-color:white;background-color:orange"> lotion Name: <span id="display_name2"> </span></h1>
+
+    <h2 style="background-color:orange; font-color:white;"> price is: <span id="price_id2"></span></h2>
+
+
+    <h1 style="font-color:white;background-color:orange"> lotion Name: <span id="display_name3"> </span></h1>
+
+    <h2 style="background-color:orange; font-color:white;"> price is: <span id="price_id3"></span></h2>
+
+
+    <h1 style="font-color:white;background-color:orange"> lotion Name: <span id="display_name4"> </span></h1>
+
+    <h2 style="background-color:orange; font-color:white;"> price is: <span id="price_id4"></span></h2>
+
+
+    <h1 style="font-color:white;background-color:orange"> lotion Name: <span id="display_name5"> </span></h1>
+
+    <h2 style="background-color:orange; font-color:white;"> price is: <span id="price_id5"></span></h2>
+
+
+    <h1 style="font-color:white;background-color:orange"> lotion Name: <span id="display_name6"> </span></h1>
+
+    <h2 style="background-color:orange; font-color:white;"> price is: <span id="price_id6"></span></h2>
+
+-->
+
+
+<!--
+
+</fieldset>
+
+<fieldset style="width:40%; background-color:blue;" >
+  <legend  style="width:40%;"> Output</legend>
+
+    <h1 style="color:white;"> lotion Name: <span id="display_name2"> </span></h1>
+
+    <h2 style="color:white;"> price is: <span id="price_id2"></span></h2>
+  </fieldset>
+
+
+  <fieldset style="width:40%; background-color:blue;" >
+    <legend  style="width:40%;"> Output</legend>
+
+      <h1 style="color:white;"> lotion Name: <span id="display_name3"> </span></h1>
+
+      <h2 style="color:white;"> price is: <span id="price_id3"></span></h2>
+    </fieldset>
+
+
+    <fieldset style="width:40%; background-color:blue;" >
+      <legend  style="width:40%;"> Output</legend>
+
+        <h1 style="color:white;"> lotion Name: <span id="display_name4"> </span></h1>
+
+        <h2 style="color:white;"> price is: <span id="price_id4"></span></h2>
+      </fieldset>
+
+
+      <fieldset style="width:40%; background-color:blue;" >
+        <legend  style="width:40%;"> Output</legend>
+
+          <h1 style="color:white;"> lotion Name: <span id="display_name5"> </span></h1>
+
+          <h2 style="color:white;"> price is: <span id="price_id5"></span></h2>
+        </fieldset>
+
+        <fieldset style="width:40%; background-color:blue;" >
+          <legend  style="width:40%;"> Output</legend>
+
+            <h1 style="color:white;"> lotion Name: <span id="display_name6"> </span></h1>
+
+            <h2 style="color:white;"> price is: <span id="price_id6"></span></h2>
+          </fieldset>
+
+
+-->
+
+
+
+
+<a href="index.html" style="color:white;"> Back TO Main Page</a>
+
+<input type="submit" id="SUBMIT" name="SUBMIT" value="
+Continue to checkOut" onclick="passvalues2()";>
+
+</form>
+
+    <script type="text/javascript">
+
+
+    let d1=document.querySelector('#display_name1');
+    d1.textContent=sessionStorage.getItem('Lname1');
+
+    let d2=document.querySelector('#price_id1');
+    d2.textContent=sessionStorage.getItem('price1');
+
+
+    let d3=document.querySelector('#display_name2');
+    d3.textContent=sessionStorage.getItem('Lname2');
+
+    let d4=document.querySelector('#price_id2');
+    d4.textContent=sessionStorage.getItem('price2');
+
+
+
+    let d5=document.querySelector('#display_name3');
+    d5.textContent=localStorage.getItem('Lname3');
+
+    let d6=document.querySelector('#price_id3');
+    d6.textContent=localStorage.getItem('price3');
+
+
+
+    let d7=document.querySelector('#display_name4');
+    d7.textContent=localStorage.getItem('Lname4');
+
+    let d8=document.querySelector('#price_id4');
+    d8.textContent=localStorage.getItem('price4');
+
+
+
+    let d9=document.querySelector('#display_name5');
+    d9.textContent=localStorage.getItem('Lname5');
+
+    let d10=document.querySelector('#price_id5');
+    d10.textContent=localStorage.getItem('price5');
+
+
+
+    let d11=document.querySelector('#display_name6');
+    d11.textContent=localStorage.getItem('Lname6');
+
+    let d12=document.querySelector('#price_id6');
+    d12.textContent=localStorage.getItem('price6');
+
+
+    //let d3=document.querySelector('#price_id2');
+  //d3.textContent=localStorage.getItem('Lnowprice');
+
+
+
+
+
+
+    </script>
+
+  </body>
+</html>

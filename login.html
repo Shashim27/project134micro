@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <style>
+
+body {
+
+
+
+background-image: url(https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=60);
+background-size: 100%;
+font-family: montserrat;
+
+}
+
+</style>
+<meta charset="utf-8">
+<title>LOg Into your account:</title>
+<link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+/*<?php
+require('../db.php');
+session_start();
+// If form submitted, insert values into the database.
+if (isset($_POST['employeeName'])){
+        // removes backslashes
+ $employeeName = stripslashes($_REQUEST['employeeName']);
+        //escapes special characters in a string
+ $employeeName = mysqli_real_escape_string($con,$employeeName);
+ $password = stripslashes($_REQUEST['password']);
+ $password = mysqli_real_escape_string($con,$password);
+ //Checking is user existing in the database or not
+        $query = "SELECT employeeID FROM `employee` WHERE employeeName='$employeeName'
+and password='".md5($password)."'";
+ $result = mysqli_query($con,$query);
+ $rows = mysqli_num_rows($result);
+        if($rows==1){
+     $_SESSION['employeeName'] = $employeeName;
+     $_SESSION['employeeID'] = mysqli_fetch_assoc($result)['employeeID'];
+            // Redirect user to dashboard.php
+     header("Location: dashboard.php");
+         }else{
+ echo "<div class='form'>
+//
+//?>*/
+<div class="form">
+<h1>User Log in portal.</h1>
+<form action="" method="post" name="login">
+<input type="text" name="userName" placeholder="userName" required />
+<input type="password" name="password" placeholder="Password" required />
+<input name="submit" type="submit" value="Login" />
+</form>
+<br><a href="index.html">Go back</a>
+</div>
+<?php } ?>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Branch Registration - Mountain investment Bank</title>
+<link rel="stylesheet" href="../css/style.css" />
+<style>
+body {
+
+
+
+background-image: url(https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=60);
+background-size: 100%;
+font-family: montserrat;
+
+}
+h1{
+            font-Size:30px;
+            font-style: normal;
+            color:white;
+            text-align:center;
+            font-weight:bold;
+            padding: 25px;
+            background-color: #4CAF50;
+
+        }
+
+</style>
+</head>
+<body>
+<title>MOuntain investment Bank LtD:</title>
+
+
+<?php
+require('../db.php');
+// If form submitted, insert values into the database.
+if (isset($_REQUEST['branchName'])){
+        // removes backslashes
+	$branchName = stripslashes($_REQUEST['branchName']);
+        //escapes special characters in a string
+	$branchName = mysqli_real_escape_string($con,$branchName);
+        // removes backslashes
+	$branchCity = stripslashes($_REQUEST['branchCity']);
+        //escapes special characters in a string
+	$branchCity = mysqli_real_escape_string($con,$branchCity);
+        // removes backslashes
+	$password = stripslashes($_REQUEST['password']);
+	$password = mysqli_real_escape_string($con,$password);
+        $query = "INSERT into `branch` (branchName,branchCity,password)
+        VALUES ('$branchName','$branchCity','".md5($password)."')";
+        $result = mysqli_query($con,$query) or die(mysql_error());
+
+        if($result){
+
+            echo "<div class='form'>
+
+
+
+
+<div  id="example1"class="form"  >
+
+
+<h2 style="background-color:blue; padding-up:0px;">SIgn up to your new Account </h1>
+<form name="registration" action="" method="post">
+  <fieldset style="width:50%;height:20%; padding-left:15px; background-color:blue;">
+
+
+<p><input type="text" name="firstName" placeholder="Name" required /></p>
+<p><input type="text" name="branchName" placeholder="UserName" required /></p>
+<p><input type="password" name="password" placeholder="Password" required /></p>
+<p><input type="submit" name="submit" value="Register" /></p>
+
+  </fieldset>
+  <h1  style="background-color:lightyellow; color: blue; width:25%;">Click here to <a href='login.html'>Login</a></h1>
+</form>
+</div>
+<?php } ?>
+</body>
+</html>
